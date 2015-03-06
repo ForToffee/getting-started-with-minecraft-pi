@@ -177,9 +177,17 @@ x, y, z = mc.player.getPos()
 mc.setBlocks(x+1, y+1, z+1, x+11, y+11, z+11, stone)
 ```
 
-This will fill in a 10 x 10 x 10 cube of solid stone.
-
+This will fill in a 10 x 10 x 10 cube of solid stone.  
 ![](images/mcpi-setblocks.png)
+
+That's great, but all you have now is a big stone cube.  If you wanted an empty box you need to hollow it out.  This can be done with a smaller cube of `AIR` which is value 0
+
+```python
+mc.setBlocks(x+2, y+2, z+2, x+10, y+10, z+10, 0)
+```
+note how the dimensions are now one smaller in each direction
+
+Now go make a hole so you can see inside.  Of course we can do this with other block types, try filling the cube with and ID of 9 or 11 and see what happens
 
 You can create bigger volumes with the `setBlocks` function but it may take longer to generate!
 
@@ -239,8 +247,18 @@ while True:
     block_beneath = mc.getBlock(x, y-1, z)
     print(block_beneath)
 ```
+Press `Enter` twice to start the loop running
 
 ![](images/mcpi-block-test.png)
+
+If you're not already, this section is best done by typing out the code in a file; go to `File > New window` then start with
+
+```python
+from mcpi import minecraft
+from time import sleep
+
+mc = minecraft.Minecraft.create()
+```
 
 We can use an `if` statement to choose whether or not we plant a flower:
 
@@ -256,6 +274,8 @@ while True:
         mc.setBlock(x, y, z, flower)
     sleep(0.1)
 ```
+
+(Remember; to run from a file use `CTRL+S` to save it (name it as you see fit) and then `F5` to run the code)
 
 Perhaps next we could turn the tile we're standing on in to grass if it isn't already:
 
