@@ -187,7 +187,7 @@ mc.setBlocks(x+2, y+2, z+2, x+10, y+10, z+10, 0)
 ```
 note how we've reduced the dimensions of our cube by increasing the start position by 1 and reducing the end point by 1.
 
-Now go make a hole so you can see inside, of course we can do this with other block types. Try filling the cube with a block ID of 9 or 11 and see what happens.
+Now go make a hole so you can see inside, of course we can do this with other block types. Try filling the cube with a block ID of 9 or 11 and see what happens when you have a hole near the bottom of your cube.
 
 You can create bigger volumes with the `setBlocks` function but it may take longer to generate!
 
