@@ -185,7 +185,7 @@ That's great, but all you have now is a big stone cube.  If you wanted an empty 
 ```python
 mc.setBlocks(x+2, y+2, z+2, x+10, y+10, z+10, 0)
 ```
-note how the dimensions are now one smaller in each direction
+note how we've reduced the dimensions of our cube by increasing the start position by 1 and reducing the end point by 1.
 
 Now go make a hole so you can see inside.  Of course we can do this with other block types, try filling the cube with and ID of 9 or 11 and see what happens
 
